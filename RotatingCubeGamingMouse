@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Cube</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            perspective: 800px;
+            background-color: #1a1a1a;
+        }
+
+        .cube {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: rotateCube 10s infinite linear;
+        }
+
+        .face {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #fff;
+            border: 2px solid #333;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .face:nth-child(1) { transform: rotateY(0deg) translateZ(100px); }
+        .face:nth-child(2) { transform: rotateY(90deg) translateZ(100px); }
+        .face:nth-child(3) { transform: rotateY(180deg) translateZ(100px); }
+        .face:nth-child(4) { transform: rotateY(-90deg) translateZ(100px); }
+        .face:nth-child(5) { transform: rotateX(90deg) translateZ(100px); }
+        .face:nth-child(6) { transform: rotateX(-90deg) translateZ(100px); }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%;
+        }
+
+        @keyframes rotateCube {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cube">
+        <div class="face"><p>Best Gaming Mouse</p></div>
+        <div class="face"><a href="https://www.midjourney.com/showcase" target="_blank">Click Here</a></div>
+        <div class="face"><img src="https://cdn.discordapp.com/attachments/1210547739713216525/1213446970094526575/timofei_81654_minimalistic_gaming_mouse_close_up_floating_in_th_f45f46fa-18b8-474e-b967-f1dae423e204.png?ex=65f5818e&is=65e30c8e&hm=06109add78d0e586eac674a00dffcff2bdabcf3ce3554355b0f35c5136a0d4ed&" alt="Face 3: Image"></div>
+        <div class="face"><p>Want to play likeTenz?</p></div>
+        <div class="face"><p>Want to hit Radiant?</p></div>
+        <div class="face"><a href="https://www.midjourney.com/showcase" target="_blank">Clikc Here</a></div>
+    </div>
+
+</body>
+</html>
